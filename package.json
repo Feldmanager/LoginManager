@@ -8,11 +8,15 @@
     "http": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mssql": "^6.2.3",
-    "node": "^14.13.0"
+    "node": "^14.13.0",
+    "nodemon": "^2.0.4",
+    "swagger-jsdoc": "^4.2.0",
+    "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
