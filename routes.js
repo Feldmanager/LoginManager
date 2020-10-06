@@ -3,8 +3,9 @@ const router = express.Router()
 const getPassword = require('./BL/getPassword')
 const getGroups = require('./BL/getGroups')
 const jwt = require("jsonwebtoken");
+const config = require('./BL/generateConfig');
 
-const SECRET_KEY = "#$BenGay"
+const SECRET_KEY = global.gConfig.secretKey
 
 
 router.post('/', async (req, res) => {
