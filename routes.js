@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
             var token = generateAccessToken(username)
             res.contentType('application/json');
             //res.status(200).send({"token": token, "groupIds": groups})
-            res.status(200).send({"token": token})
+            res.status(200).send({"token": token, "username": username})
         }else{
             res.status(400).send({'errorContent': 'Invalid input'})
         }
