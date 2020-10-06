@@ -4,7 +4,7 @@ const getPassword = require('./BL/getPassword')
 const getGroups = require('./BL/getGroups')
 const jwt = require("jsonwebtoken");
 
-const SECRET_KEY = "#$DarNach"
+const SECRET_KEY = "#$BenGay"
 
 
 router.post('/', async (req, res) => {
