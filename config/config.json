@@ -2,7 +2,7 @@
     "development": {
         "config_id": "development",
         "node_port": 3000,
-        "getUserURL": "http://10.1.0.27:3000/Users/",
+        "getUserURL": "http://10.1.0.27:3000/Users/ByName",
         "getGroupsURL": "http://10.1.0.19:3000/Groups/",
         "requestTimeout": 2000,
         "secretKey": "#$BenGay"
@@ -10,7 +10,7 @@
     "production": {
         "config_id": "production",
         "node_port": 8080,
-        "getUserURL": "http://10.1.0.27:3000/Users/",
+        "getUserURL": "http://10.1.0.27:3000/Users/ByName",
         "getGroupsURL": "http://10.1.0.19:3000/Groups/",
         "requestTimeout": 2000,
         "secretKey": "#$BenGay"
