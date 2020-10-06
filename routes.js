@@ -14,11 +14,10 @@ router.post('/', async (req, res) => {
     try{
         var passwordFromDB = await getPassword(username)
         if(passwordFromUser === passwordFromDB){
-            //var groups = getGroups(username)
+            var groups = await getGroups(username)
             var token = generateAccessToken(username)
             res.contentType('application/json');
-            //res.status(200).send({"token": token, "groupIds": groups})
-            res.status(200).send({"token": token, "username": username})
+            res.status(200).send({"token": token, "username": username, "groupIds": groups})
         }else{
             res.status(400).send({'errorContent': 'Invalid input'})
         }
