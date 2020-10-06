@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
             res.status(400).send({'errorContent': 'Invalid input'})
         }
     }catch(err){
-        res.status(err.response.status).send(err.message)
+        res.status(500).send(err.message)
     }
 })
 
