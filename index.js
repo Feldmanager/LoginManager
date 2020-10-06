@@ -24,6 +24,12 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.use(express.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(express.json());
+
+
 /**
  * @swagger
  * /Login:
