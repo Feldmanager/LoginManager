@@ -3,7 +3,7 @@ const app = express();
 const routes = require('./routes')
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const config = require('./BL/generateConfig');
+const config = require('./config/generateConfig');
 
 const swaggerOptions = {
     swaggerDefinition: {

@@ -3,7 +3,7 @@ const router = express.Router()
 const getPassword = require('./BL/getPassword')
 const getGroups = require('./BL/getGroups')
 const jwt = require("jsonwebtoken");
-const config = require('./BL/generateConfig');
+const config = require('./config/generateConfig');
 
 const SECRET_KEY = global.gConfig.secretKey
 

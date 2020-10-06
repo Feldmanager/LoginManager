@@ -1,5 +1,5 @@
 const axios = require('axios');
-const config = require('./generateConfig');
+const config = require('../config/generateConfig');
 
 const source = axios.CancelToken.source()
 const USERS_URL = global.gConfig.getUserURL
