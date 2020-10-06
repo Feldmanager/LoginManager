@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const router = require('./routes')
+const routes = require('./routes')
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
@@ -35,24 +35,27 @@ app.use(express.json());
  * /Login:
  *  post:
  *    description: Login user
+ *    consumes:
+*      - application/json
  *    parameters:
- *      - in: query
- *        name: username
- *        description: Username of the user
- *        required: true
+ *      - in: body
+ *        name: user
+ *        description: The user to login
  *        schema:
- *           type: string
- *      - in: query
- *        name: password
- *        description: Password of the user
- *        required: true
- *        schema:
- *           type: string
+ *           type: object
+ *           required: 
+ *              - username
+ *              - password
+ *           properties:
+ *              username:
+ *                  type: string
+ *              password:
+ *                  type: string
  *    responses:
  *      '200':
  *        description: A successful response
  */
-app.use('/Login', router)
+app.use('/Login', routes)
 
 function errHandler(err, req, res, next) {
     if (err) {
