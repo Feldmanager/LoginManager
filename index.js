@@ -3,8 +3,7 @@ const app = express();
 const routes = require('./routes')
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-
-const SECRET_KEY = "#$DarNach"
+const config = require('./BL/generateConfig');
 
 const swaggerOptions = {
     swaggerDefinition: {
@@ -15,7 +14,7 @@ const swaggerOptions = {
         contact: {
             name: "Amazing Developer"
         },
-        servers: ["http://localhost:666"]
+        servers: [`http://localhost:${global.gConfig.node_port}`]
         }
     },
     apis: ["index.js"]
@@ -26,7 +25,6 @@ app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(express.urlencoded({ extended: false }));
 
-// parse application/json
 app.use(express.json());
 
 
@@ -66,6 +64,6 @@ function errHandler(err, req, res, next) {
     }
 }
 app.use(errHandler);
-app.listen(666, () => {
+app.listen(global.gConfig.node_port, () => {
     console.log("server up and running");
 })

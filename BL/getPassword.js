@@ -1,6 +1,8 @@
 const axios = require('axios');
+const config = require('./generateConfig');
 
-const USERS_URL = "http://10.1.0.27:3000/Users/"
+
+const USERS_URL = global.gConfig.getUserURL
 
 let getUserPassword = async function(username) {
     var result = await axios.get(`${USERS_URL}${username}`)

@@ -1,9 +1,13 @@
 const http = require('http')
 
-const GROUPS_URL = "/"
+const config = require('./generateConfig');
 
-const getUsersGroups = (username) => {
-    http.get(`${GROUPS_URL}username=${username}`, (res) => {
-        return res
-    })
+const GROUPS_URL = global.gConfig.getGroupsURL
+
+let getGroups = async function(username) {
+    var result = await axios.get(`${GROUPS_URL}${username}`)
+
+    return result.data.Groups
 }
+
+module.exports = getGroups
