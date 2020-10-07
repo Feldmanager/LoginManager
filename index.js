@@ -4,6 +4,12 @@ const routes = require('./routes')
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const config = require('./config/generateConfig');
+const cors = require("cors")
+
+var corsOptions = {
+    origin: `http://localhost:3001`,
+    optionsSuccessStatus: 200
+}
 
 const swaggerOptions = {
     swaggerDefinition: {
@@ -22,6 +28,8 @@ const swaggerOptions = {
     
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false }));
 

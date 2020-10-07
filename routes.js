@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router()
 const getPassword = require('./BL/getPassword')
-const getGroups = require('./BL/getGroups')
 const jwt = require("jsonwebtoken");
 const config = require('./config/generateConfig');
 
@@ -15,10 +14,9 @@ router.post('/', async (req, res) => {
     try{
         var passwordFromDB = await getPassword(username)
         if(passwordFromUser === passwordFromDB){
-            var groups = await getGroups(username)
             var token = generateAccessToken(username)
             res.contentType('application/json');
-            res.status(200).send({"token": token, "username": username, "groupIds": groups})
+            res.status(200).send({"token": token, "username": username})
         }else{
             res.status(400).send({'errorContent': 'Invalid input'})
         }
