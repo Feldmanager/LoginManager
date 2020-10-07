@@ -6,15 +6,14 @@ const config = require('./config/generateConfig');
 
 const SECRET_KEY = global.gConfig.secretKey
 
-
 router.post('/', async (req, res) => {
-    var passwordFromUser = req.body.password
-    var username = req.body.username
+    let passwordFromUser = req.body.password
+    let username = req.body.username
 
     try{
-        var passwordFromDB = await getPassword(username)
+        let passwordFromDB = await getPassword(username)
         if(passwordFromUser === passwordFromDB){
-            var token = generateAccessToken(username)
+            let token = generateAccessToken(username)
             res.contentType('application/json');
             res.status(200).send({"token": token, "username": username})
         }else{

@@ -1,0 +1,22 @@
+/Login:
+  post:
+    description: Login user
+    consumes:
+     - application/json
+    parameters:
+      - in: body
+        name: user
+        description: The user to login
+        schema:
+           type: object
+           required: 
+              - username
+              - password
+           properties:
+              username:
+                  type: string
+              password:
+                  type: string
+    responses:
+      '200':
+        description: A successful response

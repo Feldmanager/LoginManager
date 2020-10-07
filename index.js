@@ -23,8 +23,8 @@ const swaggerOptions = {
         servers: [`http://localhost:${global.gConfig.node_port}`]
         }
     },
-    apis: ["index.js"]
-    };
+    apis: ["Swagger\\Docs\\*.yaml"]
+};
     
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
@@ -36,31 +36,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-/**
- * @swagger
- * /Login:
- *  post:
- *    description: Login user
- *    consumes:
-*      - application/json
- *    parameters:
- *      - in: body
- *        name: user
- *        description: The user to login
- *        schema:
- *           type: object
- *           required: 
- *              - username
- *              - password
- *           properties:
- *              username:
- *                  type: string
- *              password:
- *                  type: string
- *    responses:
- *      '200':
- *        description: A successful response
- */
 app.use('/Login', routes)
 
 function errHandler(err, req, res, next) {
