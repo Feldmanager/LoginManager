@@ -7,8 +7,8 @@ const config = require('./config/generateConfig');
 const cors = require("cors")
 
 var corsOptions = {
-    origin: `http://localhost:3001`,
-    optionsSuccessStatus: 200
+    origin: [`http://localhost:3001`, `http://10.1.0.27:3001`],
+    optionsSuccessStatus: 200,
 }
 
 const swaggerOptions = {
