@@ -25,7 +25,7 @@ const swaggerOptions = {
     },
     apis: ["Swagger\\Docs\\*.yaml"]
 };
-    
+
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
