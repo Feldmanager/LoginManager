@@ -7,10 +7,10 @@
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
         "authorizationMapping": {
-            "Admin": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
-            "Makas": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
-            "Segel": ["CreateTicket", "ViewAllTickets", "Fields"],
-            "MaintenancePerson": ["ViewAllTickets"]
+            "Admin": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "Makas": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "Segel": ["פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "MaintenancePerson": ["כל התקלות"]
         }
     },
     "production": {
@@ -21,10 +21,10 @@
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
         "authorizationMapping": {
-            "Admin": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
-            "Makas": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
-            "Segel": ["CreateTicket", "ViewAllTickets", "Fields"],
-            "MaintenancePerson": ["ViewAllTickets"]
+            "Admin": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "Makas": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "Segel": ["פתיחת תקלה", "כל התקלות", "מגרשים"],
+            "MaintenancePerson": ["כל התקלות"]
         }
     }
 }
