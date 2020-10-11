@@ -6,7 +6,12 @@
         "getGroupsURL": "http://10.1.0.19:3000/Groups/GroupByUsername/",
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
-        "roles": ["admin", ""]
+        "authorizationMapping": {
+            "Admin": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
+            "Makas": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
+            "Segel": ["CreateTicket", "ViewAllTickets", "Fields"],
+            "MaintenancePerson": ["ViewAllTickets"]
+        }
     },
     "production": {
         "config_id": "production",
@@ -15,6 +20,11 @@
         "getGroupsURL": "http://10.1.0.19:3000/Groups/GroupByUsername/",
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
-        "roles": ["admin", ""]
+        "authorizationMapping": {
+            "Admin": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
+            "Makas": ["CreateUser", "CreateTicket", "ViewAllTickets", "Fields"],
+            "Segel": ["CreateTicket", "ViewAllTickets", "Fields"],
+            "MaintenancePerson": ["ViewAllTickets"]
+        }
     }
 }

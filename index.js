@@ -26,8 +26,8 @@ const swaggerOptions = {
     apis: ["Swagger\\Docs\\*.yaml"]
 };
 
-// const swaggerDocs = swaggerJsDoc(swaggerOptions);
-// app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(cors(corsOptions));
 
