@@ -20,14 +20,14 @@ const swaggerOptions = {
         contact: {
             name: "Amazing Developer"
         },
-        servers: [`http://localhost:${global.gConfig.node_port}`]
+        servers: [`http://localhost:${global.gLoginConfig.node_port}`]
         }
     },
     apis: ["Swagger\\Docs\\*.yaml"]
 };
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+// const swaggerDocs = swaggerJsDoc(swaggerOptions);
+// app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(cors(corsOptions));
 
@@ -47,6 +47,6 @@ function errHandler(err, req, res, next) {
     }
 }
 app.use(errHandler);
-app.listen(global.gConfig.node_port, () => {
+app.listen(global.gLoginConfig.node_port, () => {
     console.log("server up and running");
 })

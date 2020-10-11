@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router()
 const getPassword = require('./BL/getPassword')
+const getGroupsByUsername = require('./BL/getGroupsByUsername')
 const jwt = require("jsonwebtoken");
 const config = require('./config/generateConfig');
 
-const SECRET_KEY = global.gConfig.secretKey
+const SECRET_KEY = global.gLoginConfig.secretKey
+const ROLES = global.gLoginConfig.roles
 
 router.post('/', async (req, res) => {
     let passwordFromUser = req.body.password
@@ -27,5 +29,6 @@ router.post('/', async (req, res) => {
 function generateAccessToken(username) {
     return jwt.sign(username, SECRET_KEY);
 }
+
 
 module.exports = router
