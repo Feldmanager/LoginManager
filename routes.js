@@ -3,7 +3,6 @@ const router = express.Router()
 const getPassword = require('./BL/getPassword')
 const jwt = require("jsonwebtoken");
 const config = require('./config/generateConfig');
-// const {GetUserAuthorization} = require('commonframework');
 
 const SECRET_KEY = global.gLoginConfig.secretKey
 const ROLES = global.gLoginConfig.authorizationMapping

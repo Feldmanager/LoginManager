@@ -2,8 +2,6 @@ const axios = require('axios');
 const config = require('../config/generateConfig');
 const {SqlHandler, UserInvalidInputError} = require('commonframework');
 
-const USERS_URL = global.gLoginConfig.getUserURL
-
 const getUserPassword = async function(username) {
     let sqlHandler = new SqlHandler();
     let result = await sqlHandler.Execute(`EXEC GetUserByName @Username = '${username}';`);
