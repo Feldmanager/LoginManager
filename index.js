@@ -54,6 +54,6 @@ function errHandler(err, req, res, next) {
     }
 }
 app.use(errHandler);
-app.listen(3002, () => {
+app.listen(global.gLoginConfig.node_port, () => {
     console.log("server up and running");
 })
