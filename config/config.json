@@ -45,24 +45,12 @@
                 "כל התקלות": {
                     "isEnabled": true,
                     "isEditEnabled": true
-                },
-                "יצירת משתמש": {
-                    "isEnabled": false
                 }
             },
             "MaintenancePerson": {
-                "מגרשים": {
-                    "isEnabled": false
-                },
-                "פתיחת תקלה": {
-                    "isEnabled": false
-                },
                 "כל התקלות": {
                     "isEnabled": true,
                     "isEditEnabled": false
-                },
-                "יצירת משתמש": {
-                    "isEnabled": false
                 }
             }
         }
@@ -113,24 +101,12 @@
                 "כל התקלות": {
                     "isEnabled": true,
                     "isEditEnabled": true
-                },
-                "יצירת משתמש": {
-                    "isEnabled": false
                 }
             },
             "MaintenancePerson": {
-                "מגרשים": {
-                    "isEnabled": false
-                },
-                "פתיחת תקלה": {
-                    "isEnabled": false
-                },
                 "כל התקלות": {
                     "isEnabled": true,
                     "isEditEnabled": false
-                },
-                "יצירת משתמש": {
-                    "isEnabled": false
                 }
             }
         }
