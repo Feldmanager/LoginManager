@@ -2,15 +2,137 @@
     "development": {
         "config_id": "development",
         "node_port": 3000,
-        "getUserURL": "http://10.1.0.27:3000/Users/ByName/",
         "requestTimeout": 2000,
-        "secretKey": "#$BenGay"
+        "secretKey": "#$BenGay",
+        "authorizationMapping": {
+            "Admin": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Makas": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Staff": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            },
+            "MaintenancePerson": {
+                "מגרשים": {
+                    "isEnabled": false
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": false
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": false
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            }
+        }
     },
     "production": {
         "config_id": "production",
         "node_port": 8080,
-        "getUserURL": "http://10.1.0.27:3000/Users/ByName/",
         "requestTimeout": 2000,
-        "secretKey": "#$BenGay"
+        "secretKey": "#$BenGay",
+        "authorizationMapping": {
+            "Admin": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Makas": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Staff": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            },
+            "MaintenancePerson": {
+                "מגרשים": {
+                    "isEnabled": false
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": false
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": false
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            }
+        }
     }
 }

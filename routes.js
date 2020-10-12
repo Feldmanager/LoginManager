@@ -4,7 +4,8 @@ const getPassword = require('./BL/getPassword')
 const jwt = require("jsonwebtoken");
 const config = require('./config/generateConfig');
 
-const SECRET_KEY = global.gConfig.secretKey
+const SECRET_KEY = global.gLoginConfig.secretKey
+const ROLES = global.gLoginConfig.authorizationMapping
 
 router.post('/', async (req, res) => {
     let passwordFromUser = req.body.password
@@ -14,8 +15,10 @@ router.post('/', async (req, res) => {
         let passwordFromDB = await getPassword(username)
         if(passwordFromUser === passwordFromDB){
             let token = generateAccessToken(username)
+            let permission = req.role;
+            let usersActions = ROLES[permission]
             res.contentType('application/json');
-            res.status(200).send({"token": token, "username": username})
+            res.status(200).send({"token": token, "username": username, "usersActions": usersActions})
         }else{
             res.status(400).send({'errorContent': 'Invalid input'})
         }

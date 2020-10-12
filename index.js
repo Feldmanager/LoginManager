@@ -5,6 +5,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const config = require('./config/generateConfig');
 const cors = require("cors")
+const {Authorize} = require('commonframework');
 
 var corsOptions = {
     origin: [`http://localhost:3001`, `http://10.1.0.27:3001`],
@@ -20,7 +21,7 @@ const swaggerOptions = {
         contact: {
             name: "Amazing Developer"
         },
-        servers: [`http://localhost:${global.gConfig.node_port}`]
+        servers: [`http://localhost:${global.gLoginConfig.node_port}`]
         }
     },
     apis: ["Swagger\\Docs\\*.yaml"]
@@ -35,6 +36,12 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+    req.user = req.body.username;
+    next();
+})
+
+app.use(Authorize)
 
 app.use('/Login', routes)
 
@@ -47,6 +54,6 @@ function errHandler(err, req, res, next) {
     }
 }
 app.use(errHandler);
-app.listen(global.gConfig.node_port, () => {
+app.listen(global.gLoginConfig.node_port, () => {
     console.log("server up and running");
 })
