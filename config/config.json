@@ -7,10 +7,66 @@
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
         "authorizationMapping": {
-            "Admin": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "Makas": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "Segel": ["פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "MaintenancePerson": ["כל התקלות"]
+            "Admin": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Makas": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Staff": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            },
+            "MaintenancePerson": {
+                "מגרשים": {
+                    "isEnabled": false
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": false
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": false
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            }
         }
     },
     "production": {
@@ -21,10 +77,66 @@
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
         "authorizationMapping": {
-            "Admin": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "Makas": ["יצירת משתמש", "פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "Segel": ["פתיחת תקלה", "כל התקלות", "מגרשים"],
-            "MaintenancePerson": ["כל התקלות"]
+            "Admin": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Makas": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": true
+                }
+            },
+            "Staff": {
+                "מגרשים": {
+                    "isEnabled": true
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": true
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": true
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            },
+            "MaintenancePerson": {
+                "מגרשים": {
+                    "isEnabled": false
+                },
+                "פתיחת תקלה": {
+                    "isEnabled": false
+                },
+                "כל התקלות": {
+                    "isEnabled": true,
+                    "isEditEnabled": false
+                },
+                "יצירת משתמש": {
+                    "isEnabled": false
+                }
+            }
         }
     }
 }
