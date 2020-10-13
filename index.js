@@ -7,8 +7,10 @@ const config = require('./config/generateConfig');
 const cors = require("cors")
 const {Authorize, UserInvalidInputError} = require('commonframework');
 
+const ALLOWED_ORIGINS = global.gLoginConfig.allowedOrigins
+
 var corsOptions = {
-    origin: [`http://localhost:3001`, `http://10.1.0.27:3001`],
+    origin: ALLOWED_ORIGINS,
     optionsSuccessStatus: 200,
 }
 

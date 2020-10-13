@@ -4,6 +4,7 @@
         "node_port": 3000,
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
+        "allowedOrigins": ["http://localhost:3001", "http://10.1.0.27:3001", "http://10.1.0.26:3001", "http://10.1.0.19:3001", "http://10.1.0.14:3001", "http://10.1.0.11:3001"],
         "authorizationMapping": {
             "Admin": {
                 "מגרשים": {
@@ -60,6 +61,7 @@
         "node_port": 8080,
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
+        "allowedOrigins": ["http://10.1.0.119:3000"],
         "authorizationMapping": {
             "Admin": {
                 "מגרשים": {
