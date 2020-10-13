@@ -5,7 +5,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const config = require('./config/generateConfig');
 const cors = require("cors")
-const {Authorize} = require('commonframework');
+const {Authorize, UserInvalidInputError} = require('commonframework');
 
 var corsOptions = {
     origin: [`http://localhost:3001`, `http://10.1.0.27:3001`],
@@ -47,10 +47,11 @@ app.use('/Login', routes)
 
 function errHandler(err, req, res, next) {
     if (err) {
-        res.json({
-            success: 0,
-            message: err.message
-        })
+        if (err instanceof UserInvalidInputError){
+            res.status(400).send(err.message)
+        }else{
+            res.status(500).send(err.message)
+        }
     }
 }
 app.use(errHandler);
