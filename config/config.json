@@ -15,10 +15,7 @@
             "http://10.1.0.11:3001"
         ],
         "authorizationMapping": {
-            "Admin": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
+            "Admin": { 
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
@@ -26,14 +23,11 @@
                     "isEnabled": true,
                     "isEditEnabled": true
                 },
-                "יצירת משתמש": {
+                "ניהול": {
                     "isEnabled": true
                 }
             },
             "Makas": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
@@ -41,14 +35,11 @@
                     "isEnabled": true,
                     "isEditEnabled": true
                 },
-                "יצירת משתמש": {
+                "ניהול": {
                     "isEnabled": true
                 }
             },
             "Staff": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
@@ -86,9 +77,6 @@
         ],
         "authorizationMapping": {
             "Admin": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
@@ -96,14 +84,11 @@
                     "isEnabled": true,
                     "isEditEnabled": true
                 },
-                "יצירת משתמש": {
+                "ניהול": {
                     "isEnabled": true
                 }
             },
             "Makas": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
@@ -111,14 +96,11 @@
                     "isEnabled": true,
                     "isEditEnabled": true
                 },
-                "יצירת משתמש": {
+                "ניהול": {
                     "isEnabled": true
                 }
             },
             "Staff": {
-                "מגרשים": {
-                    "isEnabled": true
-                },
                 "פתיחת תקלה": {
                     "isEnabled": true
                 },
