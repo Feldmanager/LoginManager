@@ -4,7 +4,16 @@
         "node_port": 3000,
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
-        "allowedOrigins": ["http://10.1.0.119:3000", "http://localhost:3001", "http://10.1.0.17:3001", "http://10.1.0.27:3001", "http://10.1.0.26:3001", "http://10.1.0.19:3001", "http://10.1.0.14:3001", "http://10.1.0.11:3001"],
+        "allowedOrigins": [
+            "http://10.1.0.119:3000",
+            "http://localhost:3001",
+            "http://10.1.0.17:3001",
+            "http://10.1.0.27:3001",
+            "http://10.1.0.26:3001",
+            "http://10.1.0.19:3001",
+            "http://10.1.0.14:3001",
+            "http://10.1.0.11:3001"
+        ],
         "authorizationMapping": {
             "Admin": {
                 "מגרשים": {
@@ -61,7 +70,12 @@
         "node_port": 8080,
         "requestTimeout": 2000,
         "secretKey": "#$BenGay",
-        "allowedOrigins": ["http://10.1.0.119:80", "http://10.1.0.119:443"],
+        "allowedOrigins": [
+            "http://40.118.47.110",
+            "http://feldmanager.com",
+            "https://40.118.47.110",
+            "https://feldmanager.com"
+        ],
         "authorizationMapping": {
             "Admin": {
                 "מגרשים": {

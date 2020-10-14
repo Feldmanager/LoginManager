@@ -6,6 +6,12 @@ const config = require('./config/generateConfig');
 const cors = require("cors")
 const {Authorize, UserInvalidInputError} = require('commonframework');
 const swaggerDocs = require('./Swagger/index')
+const fs = require('fs');
+const https = require('https');
+const privateKey  = fs.readFileSync('/run/secrets/server.key', 'utf8');
+const certificate = fs.readFileSync('/run/secrets/server.crt', 'utf8');
+
+let credentials = {key: privateKey, cert: certificate};
 
 const ALLOWED_ORIGINS = global.gLoginConfig.allowedOrigins
 
@@ -41,6 +47,9 @@ function errHandler(err, req, res, next) {
     }
 }
 app.use(errHandler);
-app.listen(global.gLoginConfig.node_port, () => {
+
+let httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(global.gLoginConfig.node_port, () => {
     console.log("server up and running");
 })
